@@ -15,7 +15,8 @@ public class App
     {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ConfigurationClass.class);
         Movie movie = applicationContext.getBean("movie1", Movie.class);
-
+        Movie vedhalam = applicationContext.getBean("vedhalam", Movie.class);
         System.out.println(movie);
+        System.out.println(vedhalam);
     }
 }
