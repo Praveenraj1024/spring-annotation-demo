@@ -1,5 +1,6 @@
 package com.stackroute.domain;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,6 +28,12 @@ public class ConfigurationClass {
     public Movie getMovie() {
         Movie movie1 = new Movie();
         return movie1;
+    }
+
+    @Bean(name = "lifeCycle")
+    public BeanLifecycleDemoBean getBeanLife() {
+        BeanLifecycleDemoBean beanLifecycleDemoBean = new BeanLifecycleDemoBean();
+        return beanLifecycleDemoBean;
     }
 
 }
