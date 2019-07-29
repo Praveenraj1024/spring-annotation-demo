@@ -14,7 +14,7 @@ public class App
     {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ConfigurationClass.class);
         Movie movie1 = applicationContext.getBean("movie1", Movie.class);
-        BeanLifecycleDemoBean beanLifecycleDemoBean = applicationContext.getBean("lifeCycle", BeanLifecycleDemoBean.class);
+//        BeanLifecycleDemoBean beanLifecycleDemoBean = applicationContext.getBean("lifeCycle", BeanLifecycleDemoBean.class);
         ((AbstractApplicationContext)applicationContext).destroy();
         System.out.println(movie1);
     }
